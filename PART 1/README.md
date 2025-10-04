@@ -1,6 +1,6 @@
 # VSDBabySoC: A Comprehensive Guide to RISC-V Based SoC Design
-
-![SoC Design Banner](https://github.com/user-attachments/assets/a3428bc5-1ddd-4bdc-b3a6-10a74205c8d8)
+[![RISC-V](https://img.shields.io/badge/RISC--V-Project-orange?style=for-the-badge&logo=riscv)](https://riscv.org/)
+[![Week 2](https://img.shields.io/badge/Week%202-Part%201-green?style=for-the-badge)]()
 
 ## 📑 Table of Contents
 1. [Introduction](#introduction)
@@ -42,6 +42,8 @@ Think of an SoC as a complete computer system miniaturized onto a single silicon
 ---
 
 ## 🏗️ SoC Architecture and Structure
+
+<img width="984" height="984" alt="image" src="https://github.com/user-attachments/assets/0b7b0ac6-5993-45b7-979b-38fca00c02cf" />
 
 Modern SoCs are marvels of engineering that integrate diverse subsystems into a cohesive whole. A typical SoC architecture includes:
 
@@ -176,14 +178,14 @@ The VSDBabySoC integrates three primary IP blocks into a cohesive system:
 ┌─────────────────────────────────────────────────────────┐
 │                    VSDBabySoC                           │
 │                                                         │
-│  ┌──────────┐      ┌──────────┐      ┌──────────┐    │
-│  │          │ CLK  │          │      │          │    │
-│  │   PLL    │─────▶│  RVMYTH  │      │   DAC    │    │
-│  │          │      │  (RISC-V)│──────│          │───▶│ OUT
-│  └──────────┘      │          │ 10bit│          │    │
-│                    └──────────┘      └──────────┘    │
-│                         │                             │
-│                     Register r17                      │
+│  ┌──────────┐      ┌──────────┐      ┌──────────┐       │
+│  │          │ CLK  │          │      │          │       │
+│  │   PLL    │─────▶│  RVMYTH  │      │   DAC    │       │
+│  │          │      │  (RISC-V)│──────│          │───▶Out│ 
+│  └──────────┘      │          │ 10bit│          │       │
+│                    └──────────┘      └──────────┘       │
+│                         │                               │
+│                     Register r17                        │
 └─────────────────────────────────────────────────────────┘
 ```
 
@@ -282,14 +284,19 @@ The DAC bridges the digital and analog worlds, converting processor output to an
 
 **Architecture Types:**
 
+
 1. **Weighted Resistor DAC**
+   
    ![Weighted Resistor DAC](https://github.com/user-attachments/assets/344e4ffd-7509-41e7-ac42-21a553b3db11)
+   
    - Uses binary-weighted resistors
    - Simple but requires precise resistor matching
    - Resistor values: R, 2R, 4R, 8R, etc.
 
 2. **R-2R Ladder DAC**
+   
    ![R-2R Ladder DAC](https://github.com/user-attachments/assets/5c15f424-1a94-4424-b019-a76c0ca0db43)
+   
    - Uses only two resistor values (R and 2R)
    - Better matching and scalability
    - Preferred for integrated circuits
@@ -458,7 +465,7 @@ Potential enhancements to explore:
 
 ---
 
-**Author**: [Your Name]  
+**Author**: Kevin Shah
 **Last Updated**: October 2025  
 **License**: Open Source (Specify License)
 
